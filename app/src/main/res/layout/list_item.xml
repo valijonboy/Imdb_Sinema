@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:circularflow_radiusInDP="10dp"
+    android:background="@drawable/background_item"
+    android:elevation="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/poster_iv"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/title_movie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="6dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poster_iv"
+        app:layout_constraintTop_toTopOf="@+id/poster_iv"
+        tools:text="Sherlock Holms" />
+
+    <TextView
+        android:id="@+id/movie_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/title_movie"
+        app:layout_constraintStart_toStartOf="@+id/title_movie"
+        app:layout_constraintTop_toBottomOf="@+id/title_movie"
+        tools:text="2016" />
+
+    <TextView
+        android:id="@+id/type_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/poster_iv"
+        app:layout_constraintStart_toEndOf="@+id/poster_iv"
+        tools:text="Movie" />
+
+    <TextView
+        android:id="@+id/count_votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/type_movie"
+        app:layout_constraintStart_toEndOf="@+id/type_movie"
+        tools:text="120" />
+
+    <ImageView
+        android:id="@+id/image_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/count_votes"
+        app:layout_constraintStart_toEndOf="@+id/count_votes"
+        app:layout_constraintTop_toTopOf="@+id/count_votes"
+        app:srcCompat="@drawable/comment" />
+
+    <ImageView
+        android:id="@+id/image_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_comment"
+        app:layout_constraintStart_toEndOf="@+id/image_comment"
+        app:layout_constraintTop_toTopOf="@+id/image_comment"
+        app:srcCompat="@drawable/like" />
+</androidx.constraintlayout.widget.ConstraintLayout>
